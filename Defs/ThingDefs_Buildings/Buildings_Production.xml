@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BenchBase">
+        <defName>BioferriteDrugsSynthesizer</defName>
+        <label>bioferrite drugs synthesizer</label>
+        <description>A work bench used to synthesize bioferrite drugs. It synthesizes drugs of a special role by electrical and chemical action on bioferrite capsules.</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <fillPercent>0.5</fillPercent>
+        <useHitPoints>True</useHitPoints>
+        <graphicData>
+            <texPath>Things/Building/BioferriteDrugsSynthesizer/BioferriteDrugsSynthesizer</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3.5,1.5)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>0.20</staticSunShadowHeight>
+        <altitudeLayer>Building</altitudeLayer>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <ai_chillDestination>false</ai_chillDestination>
+            <buildingTags>
+                <li>Production</li>
+                <li>Anomaly</li>
+            </buildingTags>
+        </building>
+        <designationCategory>Anomaly</designationCategory>
+        <uiOrder>610</uiOrder>
+        <statBases>
+            <WorkToBuild>3000</WorkToBuild>
+            <MaxHitPoints>180</MaxHitPoints>
+            <Flammability>0.75</Flammability>
+        </statBases>
+        <size>(3,1)</size>
+        <costList>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <Bioferrite>40</Bioferrite>
+            <Steel>60</Steel>
+            <Shard>1</Shard>
+        </costList>
+        <hasInteractionCell>true</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>250</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable" />
+            <li Class="CompProperties_Glower">
+                <glowRadius>5</glowRadius>
+                <glowColor>(73,123,138,0)</glowColor>
+            </li>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>ToolCabinet</li>
+                </linkableFacilities>
+            </li>
+            <li Class="CompProperties_Breakdownable" />
+        </comps>
+        <researchPrerequisites>
+            <li>BioferriteDrugsSynthesis</li>
+        </researchPrerequisites>
+        <constructEffect>ConstructMetal</constructEffect>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <thingClass>AnomalyDrugs.Building_EntitySampleExtractor</thingClass>
+        <defName>EntitySampleExtractor</defName>
+        <label>entity sample extractor</label>
+        <description>Place near the platform and it takes a sample from the captured entity. Extracting the sample causes a little damage to the entity and significantly reduces the containment strength. The extracted sample is used to synthesize Bioferrite Drugs. Samples are fire-prone, and are likely to explode even with a small impact, requiring isolation storage.\n\nSamples from one connected platform every day.</description>
+        <tickerType>Normal</tickerType>
+        <size>(1,2)</size>
+        <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+        <graphicData>
+            <texPath>Things/Building/EntitySampleExtractor/EntitySampleExtractor</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,3)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <uiIconScale>0.8</uiIconScale>
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>0.20</staticSunShadowHeight>
+        <building>
+            <ai_chillDestination>false</ai_chillDestination>
+            <buildingTags>
+                <li>Anomaly</li>
+            </buildingTags>
+        </building>
+        <drawerType>RealtimeOnly</drawerType>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.9</fillPercent>
+        <pathCost>50</pathCost>
+        <designationCategory>Anomaly</designationCategory>
+        <uiOrder>620</uiOrder>
+        <canOverlapZones>false</canOverlapZones>
+        <defaultPlacingRot>East</defaultPlacingRot>
+        <thingCategories>
+            <li>BuildingsPower</li>
+        </thingCategories>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <statBases>
+            <MaxHitPoints>200</MaxHitPoints>
+            <WorkToBuild>4000</WorkToBuild>
+            <Flammability>0.75</Flammability>
+            <Beauty>-10</Beauty>
+            <Mass>20</Mass>
+        </statBases>
+        <costList>
+            <ComponentIndustrial>2</ComponentIndustrial>
+            <Bioferrite>10</Bioferrite>
+            <Steel>30</Steel>
+        </costList>
+        <researchPrerequisites>
+            <li>BioferriteDrugsSynthesis</li>
+        </researchPrerequisites>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+        <comps>
+            <li Class="CompProperties_Breakdownable" />
+            <li Class="CompProperties_Facility">
+                <maxDistance>5.1</maxDistance>
+                <maxSimultaneous>1</maxSimultaneous>
+                <statOffsets>
+                    <ContainmentStrength>-40</ContainmentStrength>
+                </statOffsets>
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>80</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable" />
+            <li Class="CompProperties_AttachPoints">
+                <points>
+                    <li>
+                        <offset>(.1, 0, .8)</offset>
+                        <type>CableConnection0</type>
+                    </li>
+                    <li>
+                        <offset>(.1, 0, .8)</offset>
+                        <type>CableConnection1</type>
+                    </li>
+                    <li>
+                        <offset>(.1, 0, .8)</offset>
+                        <type>CableConnection2</type>
+                    </li>
+                    <li>
+                        <offset>(.1, 0, .8)</offset>
+                        <type>CableConnection3</type>
+                    </li>
+                    <li>
+                        <offset>(0, 0, .28)</offset>
+                        <type>Exhaust</type>
+                    </li>
+                </points>
+            </li>
+            <li Class="CompProperties_CableConnection">
+                <color>(0.36, 0.21, 0.13, 1)</color>
+                <drawMote>true</drawMote>
+                <moteDef>Mote_BioFerriteHarvested</moteDef>
+                <offsets>
+                    <li>
+                        <li>(0, 0, 0.9)</li>
+                        <li>(0, 0, 0.48)</li>
+                        <li>(0, 0, 0.3)</li>
+                        <li>(0, 0, 0.1)</li>
+                    </li>
+                    <li>
+                        <li>(0.6, 0, 0.3)</li>
+                        <li>(-0.2, 0, 0)</li>
+                        <li>(0.2, 0, 0)</li>
+                        <li>(0.4, 0, 0)</li>
+                    </li>
+                    <li>
+                        <li>(0, 0, -0.25)</li>
+                        <li>(0.4, 0, 0.48)</li>
+                        <li>(0.4, 0, 0.3)</li>
+                        <li>(0.4, 0, 0.1)</li>
+                    </li>
+                    <li>
+                        <li>(-0.65, 0, 0.3)</li>
+                        <li>(-0.2, 0, 0.65)</li>
+                        <li>(0.2, 0, 0.65)</li>
+                        <li>(0.4, 0, 0.65)</li>
+                    </li>
+                </offsets>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

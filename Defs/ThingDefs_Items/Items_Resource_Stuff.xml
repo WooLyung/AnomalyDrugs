@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="ResourceBase">
+        <defName>BioferriteCapsule</defName>
+        <label>bioferrite capsule</label>
+        <description>It is a specially processed bioferrite that can be properly fused to the human body and anomaly.</description>
+        <graphicData>
+            <texPath>Things/Item/Stuff/BioferriteCapsule</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <stackLimit>20</stackLimit>
+        <genericMarketSellable>false</genericMarketSellable>
+        <statBases>
+            <WorkToMake>500</WorkToMake>
+            <MarketValue>5</MarketValue>
+            <Mass>0.005</Mass>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <recipeMaker>
+            <researchPrerequisite>BioferriteDrugsSynthesis</researchPrerequisite>
+            <recipeUsers>
+                <li>BioferriteShaper</li>
+            </recipeUsers>
+            <displayPriority>6100</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>4</Neutroamine>
+            <Bioferrite>4</Bioferrite>
+        </costList>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingCategoryDef>
+        <defName>EntitySamples</defName>
+        <label>entity samples</label>
+        <description>Samples extracted from entity.</description>
+        <parent>ResourcesRaw</parent>
+    </ThingCategoryDef>
+
+    <ThingDef Name="EntitySample" ParentName="ResourceBase" Abstract="True">
+        <stackLimit>10</stackLimit>
+        <statBases>
+            <Mass>0.1</Mass>
+            <MaxHitPoints>10</MaxHitPoints>
+            <Flammability>1.4</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>EntitySamples</li>
+        </thingCategories>
+        <genericMarketSellable>false</genericMarketSellable>
+        <tickerType>Normal</tickerType>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>1.5</explosiveRadius>
+                <explosiveDamageType>Flame</explosiveDamageType>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="EntitySample">
+        <defName>MetalhorrorEntitySample</defName>
+        <label>metalhorror entity sample</label>
+        <description>Samples extracted from Metalhorror.</description>
+        <graphicData>
+            <texPath>Things/Item/Sample/MetalhorrorEntitySample</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>30</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <ThingDef ParentName="EntitySample">
+        <defName>SightstealerEntitySample</defName>
+        <label>sightstealer entity sample</label>
+        <description>Samples extracted from Sightstealer.</description>
+        <graphicData>
+            <texPath>Things/Item/Sample/SightstealerEntitySample</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>20</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <ThingDef ParentName="EntitySample">
+        <defName>RevenantEntitySample</defName>
+        <label>revenant entity sample</label>
+        <description>Samples extracted from Revenant.</description>
+        <graphicData>
+            <texPath>Things/Item/Sample/RevenantEntitySample</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>20</MarketValue>
+        </statBases>
+    </ThingDef>
+</Defs>

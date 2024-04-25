@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>*/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+        <value>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>MetalhorrorEntitySample</thingDef>
+                <countRange>0~8</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>SightstealerEntitySample</thingDef>
+                <countRange>0~8</countRange>
+            </li>
+            <li Class="StockGenerator_SingleDef">
+                <thingDef>RevenantEntitySample</thingDef>
+                <countRange>0~8</countRange>
+            </li>
+        </value>
+    </Operation>
+</Patch>

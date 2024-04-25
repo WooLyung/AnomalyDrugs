@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="MakeableDrugPillBase">
+        <defName>Catalystol</defName>
+        <label>Catalystol</label>
+        <description>It reduces the patient's immune system, immediately triggers the growth of Metalhorrors, allowing them to escape from the host's body.\n\nAs soon as you take Catalystol, a Metalhorror rips through host's body and gets out. Get ready for battle!</description>
+        <possessionCount>4</possessionCount>
+        <descriptionHyperlinks><HediffDef>CatalystolShock</HediffDef></descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Drug/Catalystol</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <genericMarketSellable>false</genericMarketSellable>
+        <stackLimit>20</stackLimit>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>1000</WorkToMake>
+            <MarketValue>60</MarketValue>
+            <Mass>0.01</Mass>
+            <Flammability>0.7</Flammability>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <ingestible>
+            <drugCategory>Medical</drugCategory>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>CatalystolShock</hediffDef>
+                </li>
+                <li Class="AnomalyDrugs.IngestionOutcomeDoer_EmergeMetalhorror">
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>CatalystolSynthesis</researchPrerequisite>
+            <recipeUsers>
+                <li>BioferriteDrugsSynthesizer</li>
+            </recipeUsers>
+            <displayPriority>4000</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>2</Neutroamine>
+            <BioferriteCapsule>1</BioferriteCapsule>
+            <MetalhorrorEntitySample>4</MetalhorrorEntitySample>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <listOrder>6100</listOrder>
+                <overdoseSeverityOffset>0.0~0.0</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+  
+    <HediffDef>
+        <defName>CatalystolShock</defName>
+        <label>catalystol shock</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>Due to the influence of Catalystol, Consciousness and immunity have been greatly reduced.</description>
+        <initialSeverity>0.001</initialSeverity>
+        <deprioritizeHealing>true</deprioritizeHealing>
+        <defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor>
+        <stages> 
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.7</setMax>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <setMax>0.5</setMax>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <setMax>0.5</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>15000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+    </HediffDef>
+  
+</Defs>

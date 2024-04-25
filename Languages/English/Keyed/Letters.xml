@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <CatalystolOccursNothingLabel>Catalystol occurs nothing</CatalystolOccursNothingLabel>
+    <CatalystolOccursNothingText>{PAWN} took catalystol but nothing happened.</CatalystolOccursNothingText>
+    
+    <CatalystolPathwayLabel>Catalystol headache</CatalystolPathwayLabel>
+    <CatalystolPathwayText>{PAWN} complains of a slight headache from taking Catalystol. Apparently exposed to the infection pathway.</CatalystolPathwayText>
+</LanguageData>

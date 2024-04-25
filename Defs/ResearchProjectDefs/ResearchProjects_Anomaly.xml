@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ResearchProjectDef>
+        <defName>BioferriteDrugsSynthesis</defName>
+        <label>bioferrite drugs synthesis</label>
+        <description>Use bioferrite to find a clue to control the anomaly.</description>
+        <tab>Anomaly</tab>
+        <prerequisites>
+            <li>BioferriteShaping</li>
+        </prerequisites>
+        <knowledgeCost>15</knowledgeCost>
+        <knowledgeCategory>Advanced</knowledgeCategory>
+        <researchViewX>4.50</researchViewX>
+        <researchViewY>7.00</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>CatalystolSynthesis</defName>
+        <label>catalystol synthesis</label>
+        <description>Create a catalystol that triggers the growth of metalhorror to get it out of the host's body.</description>
+        <tab>Anomaly</tab>
+        <prerequisites>
+            <li>BioferriteDrugsSynthesis</li>
+        </prerequisites>
+        <knowledgeCost>25</knowledgeCost>
+        <knowledgeCategory>Advanced</knowledgeCategory>
+        <researchViewX>5.50</researchViewX>
+        <researchViewY>7.00</researchViewY>
+    </ResearchProjectDef>
+</Defs>

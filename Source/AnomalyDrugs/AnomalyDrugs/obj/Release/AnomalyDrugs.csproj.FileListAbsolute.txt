@@ -1,0 +1,8 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AnomalyDrugs\Source\AnomalyDrugs\AnomalyDrugs\bin\Release\AnomalyDrugs.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AnomalyDrugs\Source\AnomalyDrugs\AnomalyDrugs\bin\Release\AnomalyDrugs.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AnomalyDrugs\Source\AnomalyDrugs\AnomalyDrugs\obj\Release\AnomalyDrugs.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AnomalyDrugs\Source\AnomalyDrugs\AnomalyDrugs\obj\Release\AnomalyDrugs.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AnomalyDrugs\Source\AnomalyDrugs\AnomalyDrugs\obj\Release\AnomalyDrugs.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AnomalyDrugs\Source\AnomalyDrugs\AnomalyDrugs\obj\Release\AnomalyDrugs.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AnomalyDrugs\Assemblies\AnomalyDrugs.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AnomalyDrugs\Assemblies\AnomalyDrugs.pdb
